@@ -1,0 +1,13 @@
+﻿<ListBoxItem x:Class="KeyOtp.OtpSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KeyOtp"
+             mc:Ignorable="d" Height="120" d:DesignWidth="350" HorizontalAlignment="Center" Width="349" Padding="0,0,0,0" Foreground="Black">
+    <StackPanel Width="340" Margin="5">
+        <TextBlock x:Name="NameTextBox" TextAlignment="Center" FontSize="22" Text="{Binding DefName, Mode=OneWay}"></TextBlock>
+        <TextBlock x:Name="CodeTextBox" FontSize="56" FontStretch="Expanded" Text="{Binding Code, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontFamily="Roboto"></TextBlock>
+        <ProgressBar x:Name="Remaining" Minimum="0" Maximum="30"></ProgressBar>
+    </StackPanel>
+</ListBoxItem>
