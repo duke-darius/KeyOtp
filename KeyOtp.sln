@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.32804.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeyOtp", "KeyOtp\KeyOtp.csproj", "{5A67C061-7791-4365-B3E8-886305A7E180}"
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "KeyOtp.Setup", "KeyOtp.Setup\KeyOtp.Setup.wixproj", "{283ED3CA-9BE6-459F-B141-3034E8EC193F}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KeyOtp.Installer", "KeyOtp.Installer\KeyOtp.Installer.vdproj", "{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +23,14 @@ Global
 		{5A67C061-7791-4365-B3E8-886305A7E180}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5A67C061-7791-4365-B3E8-886305A7E180}.Release|x86.ActiveCfg = Release|Any CPU
 		{5A67C061-7791-4365-B3E8-886305A7E180}.Release|x86.Build.0 = Release|Any CPU
-		{283ED3CA-9BE6-459F-B141-3034E8EC193F}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{283ED3CA-9BE6-459F-B141-3034E8EC193F}.Debug|Any CPU.Build.0 = Debug|x86
-		{283ED3CA-9BE6-459F-B141-3034E8EC193F}.Debug|x86.ActiveCfg = Debug|x86
-		{283ED3CA-9BE6-459F-B141-3034E8EC193F}.Debug|x86.Build.0 = Debug|x86
-		{283ED3CA-9BE6-459F-B141-3034E8EC193F}.Release|Any CPU.ActiveCfg = Release|x86
-		{283ED3CA-9BE6-459F-B141-3034E8EC193F}.Release|Any CPU.Build.0 = Release|x86
-		{283ED3CA-9BE6-459F-B141-3034E8EC193F}.Release|x86.ActiveCfg = Release|x86
-		{283ED3CA-9BE6-459F-B141-3034E8EC193F}.Release|x86.Build.0 = Release|x86
+		{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}.Debug|Any CPU.ActiveCfg = Release
+		{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}.Debug|Any CPU.Build.0 = Release
+		{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}.Debug|x86.ActiveCfg = Debug
+		{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}.Debug|x86.Build.0 = Debug
+		{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}.Release|Any CPU.ActiveCfg = Release
+		{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}.Release|Any CPU.Build.0 = Release
+		{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}.Release|x86.ActiveCfg = Release
+		{F3DFB2F0-C8E3-4007-9D23-8B59895A2BAC}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

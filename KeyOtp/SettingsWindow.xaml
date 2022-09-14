@@ -35,7 +35,10 @@
                 <TextBox x:Name="NameTextBox"></TextBox>
             </GroupBox>
             <GroupBox Header="Key" Margin="10">
-                <TextBox x:Name="KeyTextBox"></TextBox>
+                <StackPanel>
+                    <TextBox x:Name="KeyTextBox"></TextBox>
+                    <Button x:Name="FromClipboardButton" Margin="10" Click="FromClipboardButton_Click">From Clipboard</Button>
+                </StackPanel>
             </GroupBox>
             <Button x:Name="UpdateSelectedButton" Margin="10" Click="UpdateSelectedButton_Click">
                 Update

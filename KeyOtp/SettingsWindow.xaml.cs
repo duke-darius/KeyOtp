@@ -1,9 +1,14 @@
 ﻿using Newtonsoft.Json;
+using OtpNet;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +17,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ZXing;
+using ZXing.Common;
+using ZXing.QrCode;
+using static System.Net.Mime.MediaTypeNames;
+using Path = System.IO.Path;
 
 namespace KeyOtp
 {
@@ -20,6 +30,9 @@ namespace KeyOtp
     /// </summary>
     public partial class SettingsWindow : Window
     {
+        // at class level
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        public static extern bool DeleteObject(IntPtr hObject);
         public LocalOtpDefinition? SelectedDefinition { get; set; }
         public LocalSettings Settings { get; set; }
 
@@ -100,6 +113,39 @@ namespace KeyOtp
             SelectedDefinition.Name = NameTextBox.Text;
             SelectedDefinition.Key = KeyTextBox.Text;
             Redraw();
+        }
+
+        private void FromClipboardButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (Clipboard.ContainsImage())
+                {
+                    var img = Clipboard.GetImage();
+                    var filePath = Path.GetTempFileName() + ".png";
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        BitmapEncoder encoder = new PngBitmapEncoder();
+
+                        encoder.Frames.Add(BitmapFrame.Create(img));
+                        encoder.Save(fileStream);
+                    }
+                    var bytes = File.ReadAllBytes(filePath);
+                    var bmp = (Bitmap)Bitmap.FromFile(filePath);
+                    var lsrc = new BitmapLuminanceSource(bmp);
+                    var bitmap2 = new BinaryBitmap(new HybridBinarizer(lsrc));
+
+                    var result = new MultiFormatReader().decode(bitmap2);
+                    //otpauth://totp/snapacc.com:SNAP?secret=SFU2ICHTRBRXA3OVWEOCXXCVIAZ5NGOH&issuer=snapacc.com
+                    var uri = new Uri(result.Text);
+                    var bits = HttpUtility.ParseQueryString(uri.Query);
+                    KeyTextBox.Text = bits["secret"];
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

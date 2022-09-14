@@ -37,6 +37,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -53,6 +61,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -70,6 +94,16 @@
         {
             "LaunchCondition"
             {
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_A89AB09370F340949EACCB05C0C704A1"
+                {
+                "Name" = "8:.NET Core"
+                "Message" = "8:[VSDNETCOREMSG]"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:https://dotnet.microsoft.com/download/dotnet-core/[NetCoreVerMajorDotMinor]"
+                "IsNETCore" = "11:TRUE"
+                "Architecture" = "2:0"
+                "Runtime" = "2:0"
+                }
             }
         }
         "File"
@@ -89,17 +123,6 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0141EA31F17D4DBBA7E128472019CC51"
-                    {
-                    "Name" = "8:Start Up"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_D30B315A1C58478C8D5BAAC1E2FCCAD9"
-                        "Folders"
-                        {
-                        }
-                    }
                 }
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_9E0D1F7CEB074D94A874565369405964"
@@ -110,6 +133,17 @@
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
+                "Folders"
+                {
+                }
+            }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_A7E2F83CF8134CB6810E3A2C9AC00FF5"
+            {
+            "Name" = "8:#1928"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:StartupFolder"
                 "Folders"
                 {
                 }
@@ -142,7 +176,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:KeyOtp.Installer"
         "ProductCode" = "8:{03E3B18F-6D85-42C2-8657-984706F62790}"
-        "PackageCode" = "8:{DF480CE6-312B-4013-A0A2-2FBC36B3298D}"
+        "PackageCode" = "8:{71D1E698-B23A-4FBB-8352-CBF9A54557A2}"
         "UpgradeCode" = "8:{F20F7532-821C-49EF-8C57-575E487A5044}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -262,16 +296,30 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_30DD027B8FB645F89605CEFA1E18BF2A"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A951C55C55D14DE983FC3CA9B00B2A7C"
             {
-            "Name" = "8:Shortcut to Publish Items from KeyOtp (Active)"
+            "Name" = "8:KeyOtp"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
             "Target" = "8:_BDFCEDD50FA44A0693996838056F21E8"
-            "Folder" = "8:_0141EA31F17D4DBBA7E128472019CC51"
+            "Folder" = "8:_875AEE7BEFD54B178F999FAA93C03794"
+            "WorkingFolder" = "8:_9E0D1F7CEB074D94A874565369405964"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C64CB2A56D2045239E7BB5D32764BE28"
+            {
+            "Name" = "8:KeyOtp"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_BDFCEDD50FA44A0693996838056F21E8"
+            "Folder" = "8:_A7E2F83CF8134CB6810E3A2C9AC00FF5"
             "WorkingFolder" = "8:_9E0D1F7CEB074D94A874565369405964"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -677,7 +725,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_BDFCEDD50FA44A0693996838056F21E8"
             {
-            "SourcePath" = "8:..\\KeyOtp\\obj\\Release\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\KeyOtp\\obj\\Debug\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9E0D1F7CEB074D94A874565369405964"
