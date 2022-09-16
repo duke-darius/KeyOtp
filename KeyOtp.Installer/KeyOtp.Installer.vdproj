@@ -44,6 +44,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -176,7 +184,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:KeyOtp.Installer"
         "ProductCode" = "8:{03E3B18F-6D85-42C2-8657-984706F62790}"
-        "PackageCode" = "8:{71D1E698-B23A-4FBB-8352-CBF9A54557A2}"
+        "PackageCode" = "8:{7B0844CD-0442-416D-97F7-5794130F4504}"
         "UpgradeCode" = "8:{F20F7532-821C-49EF-8C57-575E487A5044}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -296,6 +304,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6A7E82DD31C64BFCAA3DA1119AA91EBC"
+            {
+            "Name" = "8:Test"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_BDFCEDD50FA44A0693996838056F21E8"
+            "Folder" = "8:_9E0D1F7CEB074D94A874565369405964"
+            "WorkingFolder" = "8:_9E0D1F7CEB074D94A874565369405964"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A951C55C55D14DE983FC3CA9B00B2A7C"
             {
             "Name" = "8:KeyOtp"
